@@ -1,12 +1,14 @@
 const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
 const musicIcons = require('../../UI/icons/musicicons');
-const { prefix } = require('../../config.json'); // Assuming you have a config file for your prefix
+const config = require('../../config.json'); // Load the full config file
 
 module.exports = {
     name: 'mhelp', 
     description: 'List available music commands',
     async execute(message) { 
+        const serverId = message.guild.id;
+        const serverPrefix = config.prefixes.server_specific[serverId] || config.prefixes.default;
 
         const musicCommandFolder = './excesscommands/lavalink'; 
         const commandFiles = fs.readdirSync(musicCommandFolder).filter(file => file.endsWith('.js'));
@@ -28,7 +30,7 @@ module.exports = {
         for (const file of commandFiles) {
             const command = require(`./${file}`); 
             if (command.name && command.description) {
-                description += `**${prefix}${command.name}:** ${command.description}\n`;
+                description += `**${serverPrefix}${command.name}:** ${command.description}\n`;
             }
         }
         embed.setDescription(description);
