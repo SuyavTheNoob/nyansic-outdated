@@ -17,6 +17,8 @@ module.exports = {
             const supportServerLink = "https://discord.gg/xQF9f9yUEM";
             const githubLink = "https://github.com/GlaceYT";
             const replitLink = "https://replit.com/@GlaceYT";
+            const serverId = interaction.guildId;
+            const serverPrefix = config.prefixes.server_specific[serverId] || config.prefixes.default;
 
             const createSlashCommandPages = () => {
                 const pages = [
@@ -156,7 +158,7 @@ module.exports = {
                     const page = {
                         title: `${category.charAt(0).toUpperCase() + category.slice(1)} Commands`,
                         description: `**Total Commands : **${commands.length}\n` +
-                            `**Usage : **Only Prefix commands with \`${config.prefix}\`\n\n` +
+                            `**Usage : **Only Prefix commands with \`${serverPrefix}\`\n\n` +
                             `${category.charAt(0).toUpperCase() + category.slice(1)} related commands`,
                         commands: commands.map(command => `\`\`${command.name}\`\``),
                         image: "",
