@@ -96,6 +96,6 @@ module.exports = {
             .setColor('#0099ff')
             .setTimestamp();
 
-        message.channel.send({ embeds: [embed] });
+        message.reply({ embeds: [embed] });
     },
 };
