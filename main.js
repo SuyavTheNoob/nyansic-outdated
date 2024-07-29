@@ -1,3 +1,4 @@
+
 const { Client, GatewayIntentBits, Collection, REST, Routes } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
@@ -209,7 +210,7 @@ client.distube
                     color: 0xDC92FF, 
                     author: {
                         name: 'Now playing', 
-                        url: 'https://discord.gg/xQF9f9yUEM',
+                        url: 'https://thefreakshow.talk4fun.net/?i=1',
                         icon_url: musicIcons.playerIcon 
                     },
                     description: `- Song name: **${song.name}** \n- Duration: **${song.formattedDuration}**\n- Requested by: ${song.user}`,
@@ -243,7 +244,7 @@ client.distube
                     },
                     author: {
                         name: 'Song added sucessfully', 
-                        url: 'https://discord.gg/xQF9f9yUEM',
+                        url: 'https://thefreakshow.talk4fun.net/?i=1',
                         icon_url: musicIcons.correctIcon 
                     },
                     timestamp: new Date().toISOString() 
@@ -315,11 +316,9 @@ app.get('/', (req, res) => {
     res.sendFile(imagePath);
 });
 app.listen(port, () => {
-    console.log(`🔗 Listening to GlaceYT : http://localhost:${port}`);
+    console.log(`🔗 Listening to Laplace : http://localhost:${port}`);
 });
 
 client.login(process.env.TOKEN);
 
 module.exports = client;
-
-
