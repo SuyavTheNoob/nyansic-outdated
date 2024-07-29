@@ -54,7 +54,7 @@ module.exports = {
                         }
                     }
                 ];
-
+                
                 const commandData = {};
 
                 for (const folder of commandFolders) {
