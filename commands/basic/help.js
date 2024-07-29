@@ -74,7 +74,7 @@ module.exports = {
                         author: {
                             name: `${category.charAt(0).toUpperCase() + category.slice(1)} Commands`,
                             iconURL: "",
-                            url: "https://discord.gg/xQF9f9yUEM"
+                            url: "https://discord.com/invite/PeEHBqJNbG"
                         }
                     };
 
@@ -163,7 +163,7 @@ module.exports = {
                         author: {
                             name: `${category.charAt(0).toUpperCase() + category.slice(1)} Commands`,
                             iconURL: "",
-                            url: "https://discord.gg/xQF9f9yUEM"
+                            url: "https://discord.com/invite/PeEHBqJNbG"
                         }
                     };
 
